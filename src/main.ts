@@ -12,8 +12,8 @@ app.once('ready', () => {
         }
     });
 
-    const indexHtml = path.join(__dirname + '/index.html');
-    win.loadFile(indexHtml).then(() => {
+    const rendererHtmlPath = path.join(`${__dirname}/renderer.html`);
+    win.loadFile(rendererHtmlPath).then(() => {
         // some implementation here
     }).catch(e => console.error(e));
 });

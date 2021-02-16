@@ -1,9 +1,9 @@
 {
   "name": "electron_typescript_vscode",
   "version": "1.0.0",
-  "main": "build/index.js",
+  "main": "build/main.js",
   "scripts": {
-    "compile": "tsc && copyfiles -u 1 src/index.html build",
+    "compile": "tsc && copyfiles -u 1 src/*.html build",
     "start": "npm run compile && electron ."
   },
   "author": "Andreas Bartho",
