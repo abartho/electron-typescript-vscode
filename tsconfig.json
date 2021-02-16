@@ -9,6 +9,7 @@
     "sourceMap": true,                        // Generates corresponding '.map' file.
     "outDir": "./build",
     "strict": true,                           // Enable all strict type-checking options.
-    "forceConsistentCasingInFileNames": true  // Disallow inconsistently-cased references to the same file.
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file.
+    "skipLibCheck": true                      // Skip type checking of all declaration files (*.d.ts). Good for development compile speed, but worth disabling for release.
   }
 }
