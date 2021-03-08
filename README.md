@@ -69,7 +69,7 @@ The main process can be debugged with the pwa-node debugger that ships with Visu
 
 The launch configuration looks like this:
 
-```json
+```jsonc
 {
   "name": "Electron: Main",
   "type": "pwa-node",               //use the node debugger that comes with   VS Code
@@ -96,7 +96,7 @@ In the `runtimeArgs` section, we open a port for the renderer process. There is 
 ### Renderer process
 Debugging a renderer process requires the "Debugger for Chrome" extension.
 
-```json
+```jsonc
 {
   "name": "Electron: Renderer",
   "type": "chrome",       //use the Debugger for Chrome (extension)
@@ -111,7 +111,7 @@ In the `port` section, we specify the debugging port that we chose in the main p
 ### Compound configuration
 Visual Studio Code can only run a single configuration at a time, but we need to run the Main and the Renderer configurations at the same time. The solution are compound configurations (found in [vscode-recipes](https://github.com/Microsoft/vscode-recipes/tree/master/Electron))
 
-```json
+```jsonc
 "compounds": [ //launch multiple configurations concurrently
   {
     "name": "Electron: All",
