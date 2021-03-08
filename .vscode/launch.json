@@ -17,21 +17,21 @@
       "outputCapture": "std",
       "sourceMaps": true,
       "resolveSourceMapLocations": [
-        "${workspaceFolder}/**",      //use source maps for files in workspace folder
-        "!**/node_modules/**"         //but ignore everything in the node_modules folder
+        "${workspaceFolder}/**",        //use source maps for files in workspace folder
+        "!**/node_modules/**"           //but ignore everything in the node_modules folder
       ],
-      "preLaunchTask": "npm: compile" //recompile before debugging (execute the compile script defined in package.json)
+      "preLaunchTask": "npm: compile"   //recompile before debugging (execute the compile script defined in package.json)
     },
     {
       "name": "Electron: Renderer",
-      "type": "chrome",               //use the Debugger for Chrome (extension)
+      "type": "chrome",                 //use the Debugger for Chrome (extension)
       "request": "attach",
-      "port": 9223,                   //use debug port opened in Electron: Main configuration
+      "port": 9223,                     //use debug port opened in Electron: Main configuration
       "webRoot": "${workspaceFolder}",
       "timeout": 30000
     }
   ],
-  "compounds": [                      //launch multiple configurations concurrently
+  "compounds": [                        //launch multiple configurations concurrently
     {
       "name": "Electron: All",
       "configurations": [
