@@ -1,10 +1,10 @@
 # electron-typescript-vscode
 
-This project provides a minimal working example of how to set up Visual Studio Code to develop an Electron app in Typescript, including debug support.
+The aim of this repository is to help setting up Visual Studio Code for development and debugging of Electron apps in Typescript.
 
-Visual Studio Code comes with Electron support and Typescript support out of the box, but bringing the two together requires some knowledge of the available configuration options that beginners may not have. This repository contains a Visual Studio Code project with the bare minimum configuration to show how Visual Studio Code, Node, Electron and Typescript must be configured to work together.
+Visual Studio Code comes with Electron support and Typescript support out of the box, but bringing the two together requires some advanced knowledge of the available configuration options. The repository contains a README with step by step instructions and an example project to demonstrate how Visual Studio Code, Node, Electron and Typescript must be configured to work together.
 
-The latest example has been created and tested on Linux with 
+The latest example project has been created and tested on Linux with 
 - Node v15.13.0
 - Electron v12.0.2
 - Typescript v4.2.3
@@ -32,13 +32,13 @@ npm start
 
     It is required for debugging renderer processes.
 
-    ![Debugger for Chrome](./doc/install_debugger_for_chrome.png)
+    ![Debugger for Chrome](./docs/media/install_debugger_for_chrome.png)
 
 1) In the Run view, select the "Electron: All" configuration. 
     
     This is a compound configuration that will start both the "Electron: Main" and "Electron: Renderer" configurations.
     
-    ![Select configuration](./doc/select_configuration.png)
+    ![Select configuration](./docs/media/select_configuration.png)
     
 1) Set a breakpoint in `src/main.ts` and `src/renderer.ts`
 
@@ -49,13 +49,13 @@ npm start
 - The breakpoint in `renderer.ts` should be hit.
   
 - If the breakpoint is not hit and marked as unbound instead:
-  ![Disable Preview JavaScript Debugger](./doc/unbound_breakpoint.png)
+  ![Disable Preview JavaScript Debugger](./docs/media/unbound_breakpoint.png)
      
-     you have likely come across a bug in the new JavaScript debugger for Node.js and Chrome, which is currently in preview and enabled by default. It is used by recent versions of the "Debugger for Chrome" extension. Disabling the preview debugger will solve the problem (https://github.com/microsoft/vscode/issues/102493).
+     you have likely come across a bug in the new JavaScript debugger for Node.js and Chrome, which is currently in preview and enabled by default. It is used by recent versions of the "Debugger for Chrome" extension. As a workaround, try to disable the preview debugger (https://github.com/microsoft/vscode/issues/102493).
   - Open Settings (<kbd>Ctrl+,</kbd>)
   - Search for `debug.javascript.usePreview`
   - Set option to false
-  ![Disable Preview JavaScript Debugger](./doc/disable_preview_javascript_debugger.png)
+  ![Disable Preview JavaScript Debugger](./docs/media/disable_preview_javascript_debugger.png)
   - Run the "Electron: All" configuration again
 
 
@@ -72,7 +72,7 @@ The launch configuration looks like this:
 ```jsonc
 {
   "name": "Electron: Main",
-  "type": "pwa-node",               //use the node debugger that comes with   VS Code
+  "type": "pwa-node",               //use the node debugger that comes with VS Code
   "request": "launch",
   "cwd": "${workspaceFolder}",
   "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
