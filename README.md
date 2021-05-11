@@ -49,9 +49,9 @@ npm start
 - The breakpoint in `renderer.ts` should be hit.
   
 - If the breakpoint is not hit and marked as unbound instead:
-  ![Disable Preview JavaScript Debugger](./docs/media/unbound_breakpoint.png)
+  ![Unbound Breakpoint](./docs/media/unbound_breakpoint.png)
      
-     you have likely come across a bug in the new JavaScript debugger for Node.js and Chrome, which is currently in preview and enabled by default. It is used by recent versions of the "Debugger for Chrome" extension. As a workaround, try to disable the preview debugger (https://github.com/microsoft/vscode/issues/102493).
+     you have likely come across a [bug](https://github.com/microsoft/vscode/issues/123420) in the new JavaScript debugger for Node.js and Chrome, which is currently in preview and enabled by default. The bugfix will probably be released in Visual Studio Code v1.57. As a temporary workaround, disable the preview debugger.
   - Open Settings (<kbd>Ctrl+,</kbd>)
   - Search for `debug.javascript.usePreview`
   - Set option to false
