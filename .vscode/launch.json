@@ -24,7 +24,7 @@
     },
     {
       "name": "Electron: Renderer",
-      "type": "chrome",                 //use the Debugger for Chrome (extension)
+      "type": "pwa-chrome",             //use the Chrome debugger that comes with VS Code
       "request": "attach",
       "port": 9223,                     //use debug port opened in Electron: Main configuration
       "webRoot": "${workspaceFolder}",
