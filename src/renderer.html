@@ -2,6 +2,10 @@
     <head>
         <title>Electron Project</title>
         <script src="renderer.js"></script>
+        <!-- Electron will warn that this renderer has no content security policy, but we ignore the warning because
+            - I could not find a way to execute JavaScript from a local file (as we do) while having a content security policy.
+            - We don't noeed a content security policy because we don't load external code.
+        -->
     </head>
     <body>
         <h1>Hello World</h1>
