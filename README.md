@@ -5,10 +5,10 @@ The aim of this repository is to help setting up Visual Studio Code for developm
 Visual Studio Code comes with Electron support and Typescript support out of the box, but bringing the two together requires some advanced knowledge of the available configuration options. The repository contains a README with step by step instructions and an example project to demonstrate how Visual Studio Code, Node, Electron and Typescript must be configured to work together.
 
 The latest example project has been created and tested on Linux with 
-- Node v16.6.1
-- Electron v13.1.8
-- Typescript v4.3.5
-- Visual Studio Code v1.59.0
+- Node v16.8.0
+- Electron v14.0.0
+- Typescript v4.4.2
+- Visual Studio Code v1.60.0
 
 ## Install application
 ```sh
@@ -40,29 +40,6 @@ npm start
 - Click Continue (<kbd>F5</kbd>)
 - In the Electron example app, click the "Turn page red" button.
 - The breakpoint in `renderer.ts` will be hit.
-
----
-**Troubleshooting**
-
-  If you are using Visual Studio Code v1.56.x or older, you may find that the breakpoint in `renderer.ts` is not hit and marked as unbound instead:
-
-  ![Unbound Breakpoint](./docs/media/unbound_breakpoint.png)
-     
-  This is because of a [bug](https://github.com/microsoft/vscode/issues/123420) in the internal JavaScript debugger. As a workaround, you can either update to the latest version of Visual Studio Code, or use the "Debugger for Chrome" extension:
-  - Install the "Debugger for Chrome" extension v4.12.12
-
-    ![Debugger for Chrome](./docs/media/install_debugger_for_chrome.png)
-  - In `.vscode/launch.json`, change the renderer configuration type from `pwa-chrome` to `chrome`
-  - Change settings to prevent the "Debugger for Chrome" extension from using the internal Javascript debugger:
-    - Open Settings (<kbd>Ctrl+,</kbd>)
-    - Search for `debug.javascript.usePreview`
-    - Set option to false
-    
-    ![Disable Preview JavaScript Debugger](./docs/media/disable_preview_javascript_debugger.png)
-
-When you run the "Electron: All" configuration the next time, the breakpoint should be hit.
-
-
 
 ## How does it work?
 
