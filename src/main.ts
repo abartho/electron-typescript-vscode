@@ -6,7 +6,10 @@ app.once('ready', () => {
 
     const win = new BrowserWindow({
         width: 600,
-        height: 400
+        height: 400,
+        webPreferences: {
+            nativeWindowOpen: true  //get rid of nativeWindowOpen deprecation message: https://github.com/electron/electron/issues/28511
+        }
     });
 
     const rendererHtmlPath = path.join(`${__dirname}/renderer.html`);
