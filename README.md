@@ -27,7 +27,9 @@ npm start
 
 ## Set up Visual Studio Code and start debugging
 
-1) Set a breakpoint in `src/main.ts` and `src/renderer.ts`
+1) Open the `electron-typescript-vscode` folder in Visual Studio Code.
+
+1) Set a breakpoint in `src/main.ts` and `src/renderer.ts`.
 
 1) In the Run view, select the "Electron: All" configuration. 
     
