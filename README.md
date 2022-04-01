@@ -38,7 +38,7 @@ npm start
     ![Select configuration](./docs/media/select_configuration.png)
 
 1) Click the green arrow next to the "Electron: All" configuration, or run the "Run" -> "Start Debugging" command (<kbd>F5</kbd>)
-- The breakpoint in the `main.ts` will be hit.
+- The breakpoint in `main.ts` will be hit.
 - Click Continue (<kbd>F5</kbd>)
 - In the Electron example app, click the "Turn page red" button.
 - The breakpoint in `renderer.ts` will be hit.
