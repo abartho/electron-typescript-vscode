@@ -5,10 +5,10 @@ The aim of this repository is to help setting up Visual Studio Code for developm
 Visual Studio Code comes with Electron support and Typescript support out of the box, but bringing the two together requires some advanced knowledge of the available configuration options. The repository contains a README with step by step instructions and an example project to demonstrate how Visual Studio Code, Node, Electron and Typescript must be configured to work together.
 
 The latest example project has been created and tested on Linux with 
-- Node v18.3.0
-- Electron v19.0.4
-- Typescript v4.7.3
-- Visual Studio Code v1.68.0
+- Node v18.6.0
+- Electron v19.0.8
+- Typescript v4.7.4
+- Visual Studio Code v1.69.1
 
 ## Install application
 ```sh
@@ -48,14 +48,14 @@ npm start
 Electron has two kinds of processes: a main process and renderer processes (one for each tab). They need different launch configurations, which are shown below. The code snippets are taken from the [launch configuration](.vscode/launch.json).
 
 ### Main process
-The main process can be debugged with the pwa-node debugger, that ships with Visual Studio Code.
+The main process can be debugged with the node debugger, that ships with Visual Studio Code.
 
 The launch configuration looks like this:
 
 ```jsonc
 {
   "name": "Electron: Main",
-  "type": "pwa-node",               //use the node debugger that comes with VS Code
+  "type": "node",                   //use the node debugger that comes with VS Code
   "request": "launch",
   "cwd": "${workspaceFolder}",
   "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
@@ -77,12 +77,12 @@ In the `sourceMaps` and `resolveSourceMapLocations` sections, we enable the crea
 In the `runtimeArgs` section, we open a port for the renderer process. There is a counterpart defined in the renderer process configuration as shown below. 
 
 ### Renderer process
-A renderer process can be debugged with the pwa-chrome debugger, that ships with Visual Studio Code.
+A renderer process can be debugged with the chrome debugger, that ships with Visual Studio Code.
 
 ```jsonc
 {
   "name": "Electron: Renderer",
-  "type": "pwa-chrome",   //use the Chrome debugger that comes with VS Code
+  "type": "chrome",       //use the Chrome debugger that comes with VS Code
   "request": "attach",
   "port": 9223,           //use debug port opened in Electron: Main configuration
   "webRoot": "${workspaceFolder}",
