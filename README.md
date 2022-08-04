@@ -5,10 +5,10 @@ The aim of this repository is to help setting up Visual Studio Code for developm
 Visual Studio Code comes with Electron support and Typescript support out of the box, but bringing the two together requires some advanced knowledge of the available configuration options. The repository contains a README with step by step instructions and an example project to demonstrate how Visual Studio Code, Node, Electron and Typescript must be configured to work together.
 
 The latest example project has been created and tested on Linux with 
-- Node v18.6.0
-- Electron v19.0.8
+- Node v18.7.0
+- Electron v20.0.1
 - Typescript v4.7.4
-- Visual Studio Code v1.69.1
+- Visual Studio Code v1.70.0
 
 ## Install application
 ```sh
