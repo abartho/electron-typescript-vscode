@@ -10,7 +10,7 @@
   "license": "MIT",
   "description": "",
   "devDependencies": {
-    "electron": "^22.2.0",
+    "electron": "^23.1.2",
     "typescript": "^4.9.5",
     "copyfiles": "^2.4.1"
   }
