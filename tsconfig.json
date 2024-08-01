@@ -2,8 +2,8 @@
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
-    "target": "ES2019",                       // Electron 13 is based on Chrome 91, which supports ES2019
-                                              // https://kangax.github.io/compat-table/es2016plus/
+    "target": "ES2021",                       // Electron 31 is based on Chromium 126, which fully supports ES2021
+                                              // https://compat-table.github.io/compat-table/es2016plus/
     "module": "commonjs",
     "esModuleInterop": true,                  // Enables emit interoperability between CommonJS and ES 
     "sourceMap": true,                        // Generates corresponding '.map' file.
